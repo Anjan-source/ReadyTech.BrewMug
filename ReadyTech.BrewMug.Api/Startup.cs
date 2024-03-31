@@ -36,6 +36,8 @@ namespace ReadyTech.BrewMug.Api
 
             services.AddSingleton<IOpenWeatherSystem, OpenWeatherSystem>();
 
+            services.AddSingleton<RequestService>();
+
             services.AddHttpClient("OpenWeatherApi", options =>
             {
                 options.Timeout = TimeSpan.FromSeconds(30);
