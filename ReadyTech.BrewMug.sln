@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Api", "ReadyTech.BrewMug.Api", "{3C444D1E-9580-4F00-9E07-B407E104D8CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.AppManager", "ReadyTech.BrewMug.AppManager", "{2ADBAD63-3EC2-4E92-87D1-DDD90D03B796}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Domain", "ReadyTech.BrewMug.Domain", "{BEA76610-6895-4C40-A47E-F3831C6B49E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Data", "ReadyTech.BrewMug.Data", "{EE5C094B-4C0E-4CC8-8573-CE90A6015E87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Test", "ReadyTech.BrewMug.Test", "{0E674768-9707-4E14-86C6-FD94D3AFF521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Api", "ReadyTech.BrewMug.Api\ReadyTech.BrewMug.Api.csproj", "{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.AC", "ReadyTech.BrewMug.AC", "{8DFC8C4C-991B-4B4A-8FFB-243A64C92440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.AppMgr", "ReadyTech.BrewMug.AppMgr\ReadyTech.BrewMug.AppMgr.csproj", "{64F8D82E-AB23-40B7-AF97-EB22A5E309D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Data", "ReadyTech.BrewMug.Data\ReadyTech.BrewMug.Data.csproj", "{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Domain", "ReadyTech.BrewMug.Domain\ReadyTech.BrewMug.Domain.csproj", "{6DD29370-CF07-43FA-BD3A-A3A4E490772B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Test", "ReadyTech.BrewMug.Test\ReadyTech.BrewMug.Test.csproj", "{1F9B5057-E43C-410F-BC11-6420010C1F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.AC", "ReadyTech.BrewMug.AC\ReadyTech.BrewMug.AC.csproj", "{AA07F0F2-A749-473A-A189-FFC23C823311}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F8D82E-AB23-40B7-AF97-EB22A5E309D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F8D82E-AB23-40B7-AF97-EB22A5E309D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F8D82E-AB23-40B7-AF97-EB22A5E309D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F8D82E-AB23-40B7-AF97-EB22A5E309D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD29370-CF07-43FA-BD3A-A3A4E490772B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD29370-CF07-43FA-BD3A-A3A4E490772B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD29370-CF07-43FA-BD3A-A3A4E490772B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD29370-CF07-43FA-BD3A-A3A4E490772B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9B5057-E43C-410F-BC11-6420010C1F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9B5057-E43C-410F-BC11-6420010C1F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9B5057-E43C-410F-BC11-6420010C1F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9B5057-E43C-410F-BC11-6420010C1F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA07F0F2-A749-473A-A189-FFC23C823311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA07F0F2-A749-473A-A189-FFC23C823311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA07F0F2-A749-473A-A189-FFC23C823311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA07F0F2-A749-473A-A189-FFC23C823311}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FF31DAB-2C8D-4967-A9D7-C0A218D9BA38} = {3C444D1E-9580-4F00-9E07-B407E104D8CC}
+		{64F8D82E-AB23-40B7-AF97-EB22A5E309D2} = {2ADBAD63-3EC2-4E92-87D1-DDD90D03B796}
+		{54B9A8A3-86A4-4680-BC34-CC1E52DBCBBD} = {EE5C094B-4C0E-4CC8-8573-CE90A6015E87}
+		{6DD29370-CF07-43FA-BD3A-A3A4E490772B} = {BEA76610-6895-4C40-A47E-F3831C6B49E0}
+		{1F9B5057-E43C-410F-BC11-6420010C1F4D} = {0E674768-9707-4E14-86C6-FD94D3AFF521}
+		{AA07F0F2-A749-473A-A189-FFC23C823311} = {8DFC8C4C-991B-4B4A-8FFB-243A64C92440}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADB00E07-FE0E-4E60-A200-FCEFF9D64086}
+	EndGlobalSection
+EndGlobal
