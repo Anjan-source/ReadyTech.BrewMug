@@ -1,6 +1,6 @@
 @ReadyTech.BrewMug.Api_HostAddress = http://localhost:5118
 
 GET {{ReadyTech.BrewMug.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+Accept: AppMgr/json
 
 ###

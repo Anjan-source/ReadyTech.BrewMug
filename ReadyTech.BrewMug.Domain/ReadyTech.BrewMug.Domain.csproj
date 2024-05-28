@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ReadyTech.BrewMug.AppMgr\ReadyTech.BrewMug.AppMgr.csproj" />
+  </ItemGroup>
+
 </Project>
