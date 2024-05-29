@@ -31,7 +31,8 @@ namespace ReadyTech.BrewMug.Api.Test
             // Arrange
             var brewCoffeeVm = new BrewCoffeeVm
             {
-                 BrewCoffeeInfo=new {
+                 BrewCoffeeInfo=new BrewCoffee
+                 {
                      Message = "Your piping hot coffee is ready",
                      Prepared = DateTimeOffset.UtcNow
                  },
@@ -56,7 +57,7 @@ namespace ReadyTech.BrewMug.Api.Test
             // Arrange
             var brewCoffee = new BrewCoffeeVm
             {
-                BrewCoffeeInfo = new
+                BrewCoffeeInfo = new BrewCoffee
                 {
                     Message = "Your piping hot coffee is ready",
                     Prepared = DateTimeOffset.UtcNow
@@ -66,7 +67,7 @@ namespace ReadyTech.BrewMug.Api.Test
 
             var brewCoffeeVm = new BrewCoffeeVm
             {
-                BrewCoffeeInfo = new
+                BrewCoffeeInfo = new BrewCoffee
                 {
                     Message = "Service Unavailable"
                 },
@@ -100,7 +101,7 @@ namespace ReadyTech.BrewMug.Api.Test
             // Arrange
             var brewCoffeeVm = new BrewCoffeeVm
             {
-                BrewCoffeeInfo = new
+                BrewCoffeeInfo = new BrewCoffee
                 {
                     Message = "I’m a teapot"
                 },

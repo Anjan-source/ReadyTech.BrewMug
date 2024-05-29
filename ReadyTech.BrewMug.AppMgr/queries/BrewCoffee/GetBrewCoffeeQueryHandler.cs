@@ -11,12 +11,11 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
     /// </summary>
     public class GetBrewCoffeeVmQueryHandler : IRequestHandler<GetBrewCoffeeVmQuery, BrewCoffeeVm>
     {
-        private readonly IMapper _mapper;
+       // private readonly IMapper _mapper;
         private readonly ILogger<GetBrewCoffeeVmQueryHandler> _logger;
         private readonly IBrewService _brewService;
-        public GetBrewCoffeeVmQueryHandler(IBrewService brewService, IMapper mapper, ILogger<GetBrewCoffeeVmQueryHandler> logger)
+        public GetBrewCoffeeVmQueryHandler(IBrewService brewService, ILogger<GetBrewCoffeeVmQueryHandler> logger)
         {
-            _mapper = mapper;
             _logger = logger;
             _brewService = brewService;
         }

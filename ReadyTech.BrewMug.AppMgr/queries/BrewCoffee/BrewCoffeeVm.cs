@@ -7,7 +7,8 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
     /// </summary>
     public class BrewCoffeeVm
     {
-        public object BrewCoffeeInfo { get; set; }
+        public BrewCoffee BrewCoffeeInfo { get; set; }
         public CoffeeStatus CoffeStatus {get; set;}
     }
+    
 }
