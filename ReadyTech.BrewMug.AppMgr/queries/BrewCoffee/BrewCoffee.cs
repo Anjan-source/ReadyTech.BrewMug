@@ -9,7 +9,6 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
     public class BrewCoffee
     {
         public string Message { get; set; }
-
         public DateTimeOffset Prepared { get; set; }
     }
 }

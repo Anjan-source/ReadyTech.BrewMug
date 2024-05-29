@@ -13,6 +13,10 @@ namespace ReadyTech.BrewMug.Domain.Services
     public class BrewService : IBrewService
     {
         private static int _requestCount = 0;
+        public static class _utcTime
+        {
+            public static Func<DateTimeOffset> Now = () => DateTimeOffset.UtcNow;
+        }
         public readonly IMapper _mapper;
         public readonly ILogger<BrewService> _logger;
         public readonly IBrewRepository _brewRepository;
@@ -36,6 +40,7 @@ namespace ReadyTech.BrewMug.Domain.Services
             //var brewCoffee=_mapper.Map<BrewCoffeeVm>(result);
             
             _requestCount++;
+            var utcDateTime = _utcTime.Now();
 
             var brewCoffeeVm = new BrewCoffeeVm
             {
@@ -44,7 +49,7 @@ namespace ReadyTech.BrewMug.Domain.Services
                     Message = "Your piping hot coffee is ready",
                     Prepared = DateTimeOffset.UtcNow
                 },
-                CoffeStatus = (DateTime.Now.Month == 4 && DateTime.Now.Day == 1)
+                CoffeStatus = (utcDateTime.Month == 4 && utcDateTime.Day == 1)
                     ? CoffeeStatus.Teapot
         :           (_requestCount == 5)
                         ? CoffeeStatus.ServiceUnavailable
