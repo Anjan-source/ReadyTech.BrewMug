@@ -12,16 +12,13 @@ namespace ReadyTech.BrewMug.Domain.Services
     /// </summary>
     public class BrewService : IBrewService
     {
-        private static int _requestCount = 0;
-        public static class _utcTime
-        {
-            public static Func<DateTimeOffset> Now = () => DateTimeOffset.UtcNow;
-        }
-        public readonly IMapper _mapper;
-        public readonly ILogger<BrewService> _logger;
-        public readonly IBrewRepository _brewRepository;
-        public BrewService(IBrewRepository brewRepository, IMapper mapper, ILogger<BrewService> logger) {
+        private readonly IMapper _mapper;
+        private readonly ILogger<BrewService> _logger;
+        private readonly IBrewRepository _brewRepository;
+        private readonly RequestService _requestService;
+        public BrewService(RequestService requestService, IBrewRepository brewRepository, IMapper mapper, ILogger<BrewService> logger) {
         
+            _requestService = requestService;
             _mapper = mapper;
             _logger = logger;
             _brewRepository = brewRepository;
@@ -38,9 +35,9 @@ namespace ReadyTech.BrewMug.Domain.Services
 
             //var result= _brewRepository.GetBrewCoffeeAsync().ConfigureAwait(false);
             //var brewCoffee=_mapper.Map<BrewCoffeeVm>(result);
-
-            _requestCount++;
-            var utcDateTime = _utcTime.Now();
+            
+            _requestService.IncrementRequestCount();
+            var utcDateTime = _requestService.UtcDateTime;
 
             var brewCoffeeVm = new BrewCoffeeVm
             {
@@ -51,15 +48,15 @@ namespace ReadyTech.BrewMug.Domain.Services
                 },
                 CoffeStatus = (utcDateTime.Month == 4 && utcDateTime.Day == 1)
                     ? CoffeeStatus.Teapot
-        :           (_requestCount == 5)
+        :           (_requestService.RequestCount == 5)
                         ? CoffeeStatus.ServiceUnavailable
                         :CoffeeStatus.Ready
             };
 
             //reset the count
-            if(_requestCount == 5) 
-            { 
-                _requestCount = 0; 
+            if(_requestService.RequestCount == 5) 
+            {
+                _requestService.ResetRequestCount();
             }
             return brewCoffeeVm;
 

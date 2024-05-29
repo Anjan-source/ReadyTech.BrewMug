@@ -21,20 +21,26 @@ namespace ReadyTech.BrewMug.Domain.Test.Services
         private readonly Mock<ILogger<BrewService>> _logger;
         private readonly Mock<IMapper> _mapper;
         private readonly Mock<IBrewRepository> _brewRepository;
-
+        
         public BrewServiceTests()
         {
             _logger = new Mock<ILogger<BrewService>>();
             _mapper = new Mock<IMapper>();
             _brewRepository = new Mock<IBrewRepository>();
+
         }
 
         [TestMethod]
         public async Task GetBrewCoffeeInfo_When1st_OfApril()
         {
             //Arrange
-            _utcTime.Now = () => new DateTime(2024, 4, 1);
-            var brewService = new BrewService(_brewRepository.Object, _mapper.Object, _logger.Object);
+            var _requestService = new RequestService()
+            {
+                UtcDateTime = new DateTime(2024, 4, 1),
+
+            };
+
+            var brewService = new BrewService(_requestService, _brewRepository.Object, _mapper.Object, _logger.Object);
 
             // Act
             var result = await brewService.GetBrewCoffeeInformationAsync();
@@ -48,9 +54,9 @@ namespace ReadyTech.BrewMug.Domain.Test.Services
         public async Task GetBrewCoffeeInfo_WhenRequestCountIs5()
         {
             //Arrange
-            _utcTime.Now = () => DateTimeOffset.UtcNow;
-            var brewService = new BrewService(_brewRepository.Object, _mapper.Object, _logger.Object);
-
+            var _requestService = new Mock<RequestService>();
+            var brewService = new BrewService(_requestService.Object, _brewRepository.Object, _mapper.Object, _logger.Object);
+            
             for (int i = 0; i < 4; i++)
             {
                 await brewService.GetBrewCoffeeInformationAsync();
@@ -70,10 +76,10 @@ namespace ReadyTech.BrewMug.Domain.Test.Services
         public async Task GetBrewCoffeeInfo_WhenRequestCountLessThan5()
         {
             //Arrange
-            _utcTime.Now = () => DateTimeOffset.UtcNow;
-            var brewService = new BrewService(_brewRepository.Object, _mapper.Object, _logger.Object);
-
-            for (int i = 0; i < 4; i++)
+            var _requestService = new Mock<RequestService>();
+            var brewService = new BrewService(_requestService.Object, _brewRepository.Object, _mapper.Object, _logger.Object);
+            
+            for (int i = 0; i < 2; i++)
             {
                 await brewService.GetBrewCoffeeInformationAsync();
             }
