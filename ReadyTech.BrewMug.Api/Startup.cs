@@ -6,6 +6,7 @@ namespace ReadyTech.BrewMug.Api
     using Microsoft.Extensions.DependencyInjection;
     using ReadyTech.BrewMug.Api.Middlewares;
     using ReadyTech.BrewMug.AppMgr;
+    using ReadyTech.BrewMug.AppMgr.common;
     using ReadyTech.BrewMug.AppMgr.Interfaces;
     using ReadyTech.BrewMug.Data.Interfaces;
     using ReadyTech.BrewMug.Data.Repositories;
@@ -33,7 +34,11 @@ namespace ReadyTech.BrewMug.Api
             
             services.AddSingleton<IBrewService, BrewService>();
             services.AddSingleton<IBrewRepository, BrewRepository>();
-
+            
+            services.AddHttpClient("OpenWeatherApi", options =>
+            {
+                options.Timeout = TimeSpan.FromSeconds(30);
+            });
             // Enable CORS and add our own ploicy to restrict calls from non trusted apps
             services.AddCors(options =>
             {
@@ -60,7 +65,7 @@ namespace ReadyTech.BrewMug.Api
                 app.UseExceptionHandler("/Error");
                 
             }
-
+            
             //app.UseMiddleware<CoffeeAvailabilityCheckMiddleware>();
             app.UseHttpsRedirection();
             app.UseAuthorization();

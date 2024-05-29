@@ -34,12 +34,12 @@ namespace ReadyTech.BrewMug.Domain.Services
 
             //var result= _brewRepository.GetBrewCoffeeAsync().ConfigureAwait(false);
             //var brewCoffee=_mapper.Map<BrewCoffeeVm>(result);
-
+            
             _requestCount++;
 
             var brewCoffeeVm = new BrewCoffeeVm
             {
-                BrewCoffeeInfo = new
+                BrewCoffeeInfo = new BrewCoffee
                 {
                     Message = "Your piping hot coffee is ready",
                     Prepared = DateTimeOffset.UtcNow
