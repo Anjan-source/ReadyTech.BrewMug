@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ReadyTech.BrewMug.AC\ReadyTech.BrewMug.AC.csproj" />
     <ProjectReference Include="..\ReadyTech.BrewMug.AppMgr\ReadyTech.BrewMug.AppMgr.csproj" />
     <ProjectReference Include="..\ReadyTech.BrewMug.Data\ReadyTech.BrewMug.Data.csproj" />
     <ProjectReference Include="..\ReadyTech.BrewMug.Domain\ReadyTech.BrewMug.Domain.csproj" />

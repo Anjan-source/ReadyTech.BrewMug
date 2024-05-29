@@ -1,4 +1,4 @@
-﻿namespace ReadyTech.BrewMug.AC.OpenWeatherSystem
+﻿namespace ReadyTech.BrewMug.AC.common
 {
     using Newtonsoft.Json;
     using System;
@@ -90,8 +90,8 @@
             }
             catch (JsonException ex)
             {
-               _logger.LogError("Error deserializing JSON: " + ex.Message);
-               
+                _logger.LogError("Error deserializing JSON: " + ex.Message);
+
             }
             return default;
         }

@@ -3,10 +3,7 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
 {
     using AutoMapper;
     using MediatR;
-    using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.Options;
-    using ReadyTech.BrewMug.AC.OpenWeatherSystem;
     using ReadyTech.BrewMug.AppMgr.common;
     using ReadyTech.BrewMug.AppMgr.Interfaces;
     using ReadyTech.BrewMug.AppMgr.Models;
@@ -14,22 +11,19 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
     /// <summary>
     /// GetBrewCoffeeVmQueryHandler will manage request handler operation to get BrewCoffee Information
     /// </summary>
-    public class GetBrewCoffeeVmQueryHandler : TargetApi, IRequestHandler<GetBrewCoffeeVmQuery, BrewCoffeeVm>
+    public class GetBrewCoffeeVmQueryHandler : IRequestHandler<GetBrewCoffeeVmQuery, BrewCoffeeVm>
     {
-        private readonly IMapper _mapper;
+        //private readonly IMapper _mapper;
         private readonly ILogger<GetBrewCoffeeVmQueryHandler> _logger;
         private readonly IBrewService _brewService;
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly ExternalServices _externalServices;
-        private readonly IConfiguration _configuration;
-        public GetBrewCoffeeVmQueryHandler(IConfiguration configuration, IBrewService brewService, IMapper mapper, ILogger<GetBrewCoffeeVmQueryHandler> logger, IHttpClientFactory httpClientFactory)
-            : base(httpClientFactory, logger)
+        private readonly IOpenWeatherSystem _openWeatherSystem;
+        public GetBrewCoffeeVmQueryHandler(IOpenWeatherSystem openWeatherSystem, IBrewService brewService, ILogger<GetBrewCoffeeVmQueryHandler> logger)
         {
-            _mapper = mapper;
+            //  _mapper = mapper;
+            _openWeatherSystem = openWeatherSystem;
             _logger = logger;
             _brewService = brewService;
-            _httpClientFactory = httpClientFactory;
-            _configuration = configuration;
         }
 
         /// <summary>
@@ -43,10 +37,7 @@ namespace ReadyTech.BrewMug.AppMgr.queries.BrewCoffee
         {
             try
             {
-                var externalService = _configuration.GetSection("ExternalServices").Get<ExternalServices>();
-                string requestURI = $"{externalService.WeatherApiUrl}{externalService.City}&appid={externalService.ApiKey}";
-
-                var weatherResponse = await GetAsync<RootObject>(requestURI);
+                var weatherResponse = await _openWeatherSystem.GetWheatherTemparatureAsync();
 
                 double tempK = weatherResponse.main.temp;
                 double tempC = tempK - 273.15;

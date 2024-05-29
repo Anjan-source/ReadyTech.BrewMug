@@ -33,13 +33,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Domain.Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.Data.Test", "ReadyTech.BrewMug.Data.Test", "{7E894BA1-91EE-4C55-AE33-F20DD084125F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Data.Test", "ReadyTech.BrewMug.Data.Test\ReadyTech.BrewMug.Data.Test.csproj", "{5249C059-A99E-41BA-990A-109DF4360E1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadyTech.BrewMug.Data.Test", "ReadyTech.BrewMug.Data.Test\ReadyTech.BrewMug.Data.Test.csproj", "{5249C059-A99E-41BA-990A-109DF4360E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Domain.Test", "ReadyTech.BrewMug.Domain.Test\ReadyTech.BrewMug.Domain.Test.csproj", "{F2BF551C-7D77-4D0A-AD1C-6A7A0D290000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadyTech.BrewMug.Domain.Test", "ReadyTech.BrewMug.Domain.Test\ReadyTech.BrewMug.Domain.Test.csproj", "{F2BF551C-7D77-4D0A-AD1C-6A7A0D290000}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug..Api.Test", "ReadyTech.BrewMug..Api.Test", "{BCF55CE1-AABA-42E7-B676-6102F50B3EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.Api.Test", "ReadyTech.BrewMug.Api.Test\ReadyTech.BrewMug.Api.Test.csproj", "{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadyTech.BrewMug.Api.Test", "ReadyTech.BrewMug.Api.Test\ReadyTech.BrewMug.Api.Test.csproj", "{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadyTech.BrewMug.AC.Test", "ReadyTech.BrewMug.AC.Test", "{9206BE1E-969D-408E-BC8B-A5860661B68F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadyTech.BrewMug.AC.Tests", "ReadyTech.BrewMug.AC.Tests\ReadyTech.BrewMug.AC.Tests.csproj", "{EF598828-1034-46B3-BB1C-FE5866D4C167}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +87,10 @@ Global
 		{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF598828-1034-46B3-BB1C-FE5866D4C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF598828-1034-46B3-BB1C-FE5866D4C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF598828-1034-46B3-BB1C-FE5866D4C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF598828-1034-46B3-BB1C-FE5866D4C167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +109,8 @@ Global
 		{F2BF551C-7D77-4D0A-AD1C-6A7A0D290000} = {35FD476B-FC34-4EAE-9857-C2B1492F6896}
 		{BCF55CE1-AABA-42E7-B676-6102F50B3EF0} = {0E674768-9707-4E14-86C6-FD94D3AFF521}
 		{3648B1F5-9558-4E86-ACF4-F59E1B1AEA34} = {BCF55CE1-AABA-42E7-B676-6102F50B3EF0}
+		{9206BE1E-969D-408E-BC8B-A5860661B68F} = {0E674768-9707-4E14-86C6-FD94D3AFF521}
+		{EF598828-1034-46B3-BB1C-FE5866D4C167} = {9206BE1E-969D-408E-BC8B-A5860661B68F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ADB00E07-FE0E-4E60-A200-FCEFF9D64086}

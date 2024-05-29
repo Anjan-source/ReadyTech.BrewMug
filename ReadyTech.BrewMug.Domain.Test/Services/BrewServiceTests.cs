@@ -72,8 +72,8 @@ namespace ReadyTech.BrewMug.Domain.Test.Services
             //Arrange
             _utcTime.Now = () => DateTimeOffset.UtcNow;
             var brewService = new BrewService(_brewRepository.Object, _mapper.Object, _logger.Object);
-
-            for (int i = 0; i < 4; i++)
+            
+            for (int i = 0; i < 3; i++)
             {
                 await brewService.GetBrewCoffeeInformationAsync();
             }

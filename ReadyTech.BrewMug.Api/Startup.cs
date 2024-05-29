@@ -4,9 +4,8 @@ namespace ReadyTech.BrewMug.Api
 {
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using ReadyTech.BrewMug.Api.Middlewares;
+    using ReadyTech.BrewMug.AC.OpenWeatherSystem;
     using ReadyTech.BrewMug.AppMgr;
-    using ReadyTech.BrewMug.AppMgr.common;
     using ReadyTech.BrewMug.AppMgr.Interfaces;
     using ReadyTech.BrewMug.Data.Interfaces;
     using ReadyTech.BrewMug.Data.Repositories;
@@ -34,7 +33,9 @@ namespace ReadyTech.BrewMug.Api
             
             services.AddSingleton<IBrewService, BrewService>();
             services.AddSingleton<IBrewRepository, BrewRepository>();
-            
+
+            services.AddSingleton<IOpenWeatherSystem, OpenWeatherSystem>();
+
             services.AddHttpClient("OpenWeatherApi", options =>
             {
                 options.Timeout = TimeSpan.FromSeconds(30);

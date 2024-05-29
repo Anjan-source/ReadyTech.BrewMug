@@ -17,8 +17,4 @@
     <Folder Include="commands\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ReadyTech.BrewMug.AC\ReadyTech.BrewMug.AC.csproj" />
-  </ItemGroup>
-
 </Project>
